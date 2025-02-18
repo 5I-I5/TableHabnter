@@ -16,8 +16,6 @@ https://ezgif.com/video-to-gif/
 
 ## 🚀 Возможности
 
-
-
 - 📌 Выбор количества мест и конкретного стола
 - 📆 Выбор даты и времени бронирования
 - ✅ Подтверждение брони
@@ -44,10 +42,10 @@ https://ezgif.com/video-to-gif/
 
 1. Создайте файл `.env` и запишите в него необходимые переменные
    ```.env
-   BOT_TOKEN=bot_token
-   ADMIN_IDS=[admin_id1, admin_id2]
+   BOT_TOKEN=bot_token # Получить у @BotFatherBot
+   ADMIN_IDS=[admin_id1, admin_id2] # Вставьте свои id. Получить можно скинув себе в личку вот это  @get_id_bot
    INIT_DB=0
-   BASE_URL=https://ngrok_url
+   BASE_URL=https://ngrok_url # Получить в NGROK или вставить свой
    RABBITMQ_USERNAME=admin
    RABBITMQ_PASSWORD=password
    RABBITMQ_HOST=127.0.0.1
@@ -62,9 +60,9 @@ https://ezgif.com/video-to-gif/
    **RABBITMQ_HOST / RABBITMQ_PORT** – параметры подключения к брокеру сообщений.  
    **VHOST** – виртуальный хост, используемый в RabbitMQ для изоляции задач.  
 
-2. Запустите RabbitMQ. Например, с помощью Docker или через Amvera
-   Команды для запуска RabbitMQ через Docker
-   ```
+2. Запустите RabbitMQ. Например, с помощью Docker или через Amvera  
+   Команды для запуска RabbitMQ через Docker  
+   ```bash
    docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 \
       -e RABBITMQ_DEFAULT_USER=admin \
       -e RABBITMQ_DEFAULT_PASS=password \
@@ -75,8 +73,19 @@ https://ezgif.com/video-to-gif/
    ```bash
    pip install -r requirements.txt
    ```
-4. Запустите приложение 
+4. Запуск миграций 
+ 
+   Создаем миграцию:
+   ```bash
+   alembic revision --autogenerate -m "Initial revision"
    ```
+   
+   Применяем миграцию
+   ```bash
+   alembic upgrade head
+   ```
+5. Запустите приложение 
+   ```bash
    uvicorn app.main:app --reload
    ``` 
 

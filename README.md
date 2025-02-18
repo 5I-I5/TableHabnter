@@ -43,6 +43,25 @@ https://ezgif.com/video-to-gif/
 > Инструкция сырая. Можте чего-нибудь еще нужно сделать. Миграции, например...
 
 1. Создайте файл `.env` и запишите в него необходимые переменные
+   ```.env
+   BOT_TOKEN=bot_token
+   ADMIN_IDS=[admin_id1, admin_id2]
+   INIT_DB=0
+   BASE_URL=https://ngrok_url
+   RABBITMQ_USERNAME=admin
+   RABBITMQ_PASSWORD=password
+   RABBITMQ_HOST=127.0.0.1
+   RABBITMQ_PORT=5672
+   VHOST=myapp_vhost
+   ```
+   **BOT_TOKEN** – токен вашего Telegram-бота  
+   **ADMIN_IDS** – список ID администраторов, имеющих доступ к управлению ботом.  
+   **INIT_DB** – флаг для инициализации базы данных (далее подробнее разберем зачем он нужен).  
+   **BASE_URL** – URL для работы Telegram Webhook. Можете сгенерить ssh тунель в ngrok или где-то еще. (Не забудьте его запустить)  
+   **RABBITMQ_USERNAME / RABBITMQ_PASSWORD** – учетные данные для подключения к RabbitMQ.  
+   **RABBITMQ_HOST / RABBITMQ_PORT** – параметры подключения к брокеру сообщений.  
+   **VHOST** – виртуальный хост, используемый в RabbitMQ для изоляции задач.  
+
 2. Запустите RabbitMQ. Например, с помощью Docker или через Amvera
    Команды для запуска RabbitMQ через Docker
    ```

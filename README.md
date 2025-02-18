@@ -1,6 +1,6 @@
 # Telegram-бот для бронирования столов 📅🍽️
 
-Этот проект — Telegram-бот для бронирования столиков в ресторане **Binary Bites**.
+Этот проект — Telegram-бот для бронирования столиков в ресторане **Binary Bites**[^1].
 
 ## 🎥 Видео-демонстрация
 <!--- 
@@ -39,18 +39,33 @@ https://ezgif.com/video-to-gif/
 
 ## 🔧 Развертывание
 
-1. Установите зависимости:
+> [!CAUTION]
+> Инструкция сырая. Можте чего-нибудь еще нужно сделать. Миграции, например...
+
+1. Создайте файл `.env` и запишите в него необходимые переменные
+2. Запустите RabbitMQ. Например, с помощью Docker или через Amvera
+   Команды для запуска RabbitMQ через Docker
+   ```
+   docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 \
+      -e RABBITMQ_DEFAULT_USER=admin \
+      -e RABBITMQ_DEFAULT_PASS=password \
+      -e RABBITMQ_DEFAULT_VHOST=myapp_vhost \
+      rabbitmq:3-management
+   ```
+3. Установите зависимости:
    ```bash
    pip install -r requirements.txt
    ```
-
-2. Запуск бота:
-   ```bash
-   python -m bot.main
+4. Запустите приложение 
    ```
+   uvicorn app.main:app --reload
+   ``` 
 
-> [!Note]  
-> **Binary Bites** - вымышленный ресторан для программистов, любящих свое дело.
+> [!TIP]
+> Совет — развертывайте через Amvera.
+> 1. Сервис дает бонусом HTTPS доменное имя, которое так нужно для бота на webhook.
+> 2. А еще на Amvera значительно проще развернуть проект, чем на локальной машине 
+
 
 ## ✅ Полезные ссылки 
 
@@ -59,3 +74,7 @@ https://ezgif.com/video-to-gif/
 🤖 Telegram-бот: [@tableHanterBot](https://t.me/tableHanterBot)
 
 📖 О том, как разрабатывался этот бот, написана подробная статья:  [Читать на Хабре](https://habr.com/ru/companies/amvera/articles/882878/)
+
+---
+
+[^1]: **Binary Bites** - вымышленный ресторан.

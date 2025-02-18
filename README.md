@@ -10,11 +10,13 @@ https://video-saver.ru/
 Конвертировать mp4 → gif 
 https://ezgif.com/video-to-gif/
 --->
-[Смотреть на RuTube](https://rutube.ru/play/embed/12fae430858cc269c76f0faf00218106/)
+[Смотреть на RuTube](https://rutube.ru/play/embed/12fae430858cc269c76f0faf00218106/)  
 ![FastAPI_Aiogram_Dialog_FastStream__RabbitMQ_-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/ab825def-85f8-4bc8-8414-6a8b8b17b3e9)
 
 
 ## 🚀 Возможности
+
+
 
 - 📌 Выбор количества мест и конкретного стола
 - 📆 Выбор даты и времени бронирования
@@ -26,13 +28,14 @@ https://ezgif.com/video-to-gif/
 
 ## 🏗️ Технологии
 
-- **Python 3**
-- **Aiogram 3** — фреймворк для разработки Telegram-ботов
-- **Aiogram Dialog 2.3** — фрэймворк для удобной работы с Aiogram FSM
-- **FastAPI** — для backend API
-- **RabbitMQ + FastStream** — для обработки сообщений
-- **SQLAlchemy 2** — для работы с базой данных
-- **APScheduler** — для задач по расписанию
+- **Aiogram 3**: лучший фреймворк для разработки телеграм-ботов на Python
+- **Aiogram dialog 2.3**: фреймворк, который очень сильно упрощает работу с FSM в Aiogram 3
+- **SQLAlchemy 2**: фреймворк для работы с табличными базами данных (демонстрацию покажу на примере SQLite, но можно будет легко переключить на любую другую табличную базу данных)
+- **FastStream 0.5.3**: python-фреймворк для работы с брокерами сообщений (многие нарекают его «убийцей Celery»)
+- **APScheduler 3.1**: фреймворк, который позволит удобно работать с отложенными задачами и задачами по расписанию
+- **FastAPI**: фреймворк, который позволит всех этих ребят: телеграм-бота, APScheduler, FastStream и так далее объединить в рамках одного приложения (одной экосистемы)
+- **Alembic**: для миграций базы данных
+- **Uvicorn**: для запуска веб-сервера
 
 ## 🔧 Развертывание
 

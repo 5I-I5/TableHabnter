@@ -1,18 +1,24 @@
-# Telegram-бот для бронирования столов 📅🍽️
 
-Этот проект — это бот для бронирования столиков в ресторане **Binary Bites**[^1] прямо Telegram.
 
-## 🎥 Видео-демонстрация
-<!--- 
-Скачать видео с RuTube
-https://video-saver.ru/
+<div align="center">
+   <h1>Telegram-бот для бронирования столов 📅🍽️</h1>
+   <subtitle>Это бот для бронирования столиков в ресторане прямо Telegram.</subtitle>
+  <h2>🎥 Видео-демонстрация </h2>
+   <a href="https://rutube.ru/play/embed/12fae430858cc269c76f0faf00218106/">Смотреть на RuTube</a><br>
+   <img src="https://github.com/user-attachments/assets/ab825def-85f8-4bc8-8414-6a8b8b17b3e9" />
+</div>
 
-Конвертировать mp4 → gif 
-https://ezgif.com/video-to-gif/
---->
-[Смотреть на RuTube](https://rutube.ru/play/embed/12fae430858cc269c76f0faf00218106/)  
-![FastAPI_Aiogram_Dialog_FastStream__RabbitMQ_-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/ab825def-85f8-4bc8-8414-6a8b8b17b3e9)
+<br>
 
+<div align="center">
+   <table>
+     <tr>
+       <td>📝 <a href="https://habr.com/ru/companies/amvera/articles/882878/">Статья на Хабре</a> 📝</td>
+       <td>🌟 <a href="https://t.me/PythonPathMaster/297">Телеграм «Легкий путь в Python»</a> 🌟</td>
+       <td>🤖 Бот: <a href="https://t.me/tableHanterBot">@tableHanterBot</a> 🤖</td>
+     </tr>
+   </table>
+</div>
 
 ## 🚀 Возможности
 
@@ -24,7 +30,7 @@ https://ezgif.com/video-to-gif/
 - 🔑 Админ-панель для управления бронированиями
 - 📩 Отправка напоминаний и промокодов по расписанию
 
-## 🏗️ Технологии
+## 🏗️ Стэк Технологий
 
 - **Aiogram 3**: лучший фреймворк для разработки телеграм-ботов на Python
 - **Aiogram dialog 2.3**: фреймворк, который очень сильно упрощает работу с FSM в Aiogram 3
@@ -36,9 +42,6 @@ https://ezgif.com/video-to-gif/
 - **Uvicorn**: для запуска веб-сервера
 
 ## 🔧 Установка
-
-> [!CAUTION]
-> Инструкция сырая. Можте чего-нибудь еще нужно сделать. Миграции, например...
 
 1. Создайте файл `.env` и запишите в него необходимые переменные
    ```.env
@@ -102,7 +105,3 @@ https://ezgif.com/video-to-gif/
 🤖 Telegram-бот: [@tableHanterBot](https://t.me/tableHanterBot)
 
 📖 О том, как разрабатывался этот бот, написана подробная статья:  [Читать на Хабре](https://habr.com/ru/companies/amvera/articles/882878/)
-
----
-
-[^1]: **Binary Bites** - вымышленный ресторан.

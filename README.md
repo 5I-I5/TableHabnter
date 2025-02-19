@@ -2,7 +2,6 @@
 
 <div align="center">
    <h1>Telegram-бот для бронирования столов 📅🍽️</h1>
-   <subtitle>Это бот для бронирования столиков в ресторане прямо Telegram.</subtitle>
   <h2>🎥 Видео-демонстрация </h2>
    <a href="https://rutube.ru/play/embed/12fae430858cc269c76f0faf00218106/">Смотреть на RuTube</a><br>
    <img src="https://github.com/user-attachments/assets/ab825def-85f8-4bc8-8414-6a8b8b17b3e9" />
